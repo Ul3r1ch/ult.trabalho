@@ -4,10 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.senai.infob.ocorrencialab.models.Ocorrencias;
 import br.com.senai.infob.ocorrencialab.models.Turma;
-import br.com.senai.infob.ocorrencialab.repositories.OcorrenciasRepository;
-import br.com.senai.infob.ocorrencialab.repositories.ProfessorRepository;
 import br.com.senai.infob.ocorrencialab.repositories.TurmaRepository;
 
 @Service

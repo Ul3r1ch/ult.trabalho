@@ -11,10 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import br.com.senai.infob.ocorrencialab.services.OcorrenciasService;
-
 import br.com.senai.infob.ocorrencialab.models.Ocorrencias;
+import br.com.senai.infob.ocorrencialab.services.OcorreciasService;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
@@ -22,15 +20,11 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 public class OcorrenciasController {
     
     @Autowired
-    private OcorrenciasService ocorrenciasService;
+    private OcorreciasService ocorrenciasService;
 
-     @GetMapping("/count")
-    public Long count() {
-        return ocorrenciasService.count();
-    }
     @DeleteMapping("/delete/{id}") 
     public String deletar(@PathVariable Integer id) {
-        boolean deletou =  OcorrenciasService.delete(id);
+        boolean deletou =  ocorrenciasService.delete(id);
         if (deletou) {
             return "Usuário removido com sucesso";
         }
@@ -39,17 +33,21 @@ public class OcorrenciasController {
 
          @GetMapping("/listar")
         public List<Ocorrencias> listarTodos() {
-            return OcorrenciasService.listartodos();
+            return ocorrenciasService.listartodos();
         }
         
     @PostMapping("/salvar")
     public Ocorrencias salvar (@RequestBody Ocorrencias ocorrencias, @RequestParam String senha) {    
-        return OcorrenciasService.save( Ocorrenciasas, ocorrencias);
+        return ocorrenciasService.salvar(ocorrencias);
     }
 
 
     @PutMapping("/atualizar/{id}")
         public Ocorrencias atualizaroOcorrencias(@PathVariable Integer id, @RequestBody Ocorrencias ocorrencias ) {
-            return OcorrenciasService.atualizarOcorrencias(ocorrencias, id);
+            return ocorrenciasService.atualizarOcorrencias(ocorrencias, id);
     }
+    @GetMapping("/buscar/{id}")
+    public Ocorrencias buscar (@PathVariable Integer id) {
+    return ocorrenciasService.getId(id);
+}
 }

@@ -4,7 +4,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 import br.com.senai.infob.ocorrencialab.models.Professor;
 import br.com.senai.infob.ocorrencialab.repositories.ProfessorRepository;
 
@@ -32,9 +31,7 @@ public class ProfessorService {
        return professorRepository.findAll();
         }
 
-        public Professor salvar(Professor professor){
-        return professorRepository.save(professor);
-    }
+      
 
     public boolean  delete(Integer id) {
        Professor professor = professorRepository.findById(id).get();
@@ -56,6 +53,6 @@ public class ProfessorService {
     
          return null;
     }
-     
+   
 
 }

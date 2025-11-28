@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.senai.infob.ocorrencialab.services.ProfessorService;
 import br.com.senai.infob.ocorrencialab.models.Professor;
+import br.com.senai.infob.ocorrencialab.services.ProfessorService;
 
 @RestController
 @RequestMapping("/professor")
@@ -22,9 +22,9 @@ public class ProfessorController {
 
     @Autowired
     public ProfessorService professorService;
-     @GetMapping("/count")
-    public Long count() {
-        return professorService.count();
+     @PostMapping("/salvar")
+    public Professor save(@RequestBody Professor professor,@RequestParam String senha) {
+        return professorService.salvar(professor, senha);
     }
     @DeleteMapping("/delete/{id}") 
     public String deletar(@PathVariable Integer id) {
@@ -40,11 +40,6 @@ public class ProfessorController {
             return professorService.listartodos();
         }
         
-    @PostMapping("/salvar")
-    public Professor salvar (@RequestBody Professor professor, @RequestParam String senha) {    
-        return professorService.save( Professor, professor);
-    }
-
 
     @PostMapping("/login")
     public String login(@RequestParam String email, @RequestParam String senha){
@@ -54,4 +49,10 @@ public class ProfessorController {
         public Professor atualizarProfessor(@PathVariable Integer id, @RequestBody Professor professor ) {
             return professorService.atualizarProfessor(professor, id);
     }
+    @GetMapping("/buscar/{id}")
+    public Professor buscar (@PathVariable Integer id) 
+    {
+    return professorService.getId(id);
+}
+
 }
