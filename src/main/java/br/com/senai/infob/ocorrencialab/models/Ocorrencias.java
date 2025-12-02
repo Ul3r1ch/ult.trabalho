@@ -27,7 +27,7 @@ public class Ocorrencias {
     private String titulo;
     
     @ManyToOne
-    @JoinColumn(name = "turma_id", nullable = false)
+    @JoinColumn(name = "turma_id")
     private Turma turma;
 
     public Ocorrencias() {
