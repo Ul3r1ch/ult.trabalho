@@ -21,17 +21,18 @@ public class Professor {
     private String matricula;
     @Column(name ="senha")
     private String senha;
+     @Column(name ="email")
+    private String email;
     public Professor() {
 
     }
-    
-    public Professor(Integer id, String nome, String matricula, String senha) {
+    public Professor(Integer id, String nome, String matricula, String senha, String email) {
         this.id = id;
         this.nome = nome;
         this.matricula = matricula;
         this.senha = senha;
+        this.email = email;
     }
-
     public Integer getId() {
         return id;
     }
@@ -56,9 +57,12 @@ public class Professor {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
     
-   
-    
-
     
 }
