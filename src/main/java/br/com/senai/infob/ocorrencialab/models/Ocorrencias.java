@@ -20,7 +20,7 @@ public class Ocorrencias {
     @Column(name = "descrição")
     private String descricao;
     @Column(name = "local_ocorrencia")
-    private LocalDateTime local_ocorrencia;
+    private String local_ocorrencia;
     @Column(name = "data_ocorrencia")
     private LocalDateTime data_ocorrencia;
     @Column (name = "titulo")
@@ -33,7 +33,7 @@ public class Ocorrencias {
     public Ocorrencias() {
     }
 
-    public Ocorrencias(Integer id, String descricao, LocalDateTime local_ocorrencia, LocalDateTime data_ocorrencia,
+    public Ocorrencias(Integer id, String descricao, String local_ocorrencia, LocalDateTime data_ocorrencia,
             String titulo, Turma turma) {
         this.id = id;
         this.descricao = descricao;
@@ -59,11 +59,11 @@ public class Ocorrencias {
         this.descricao = descricao;
     }
 
-    public LocalDateTime getLocal_ocorrencia() {
+    public String getLocal_ocorrencia() {
         return local_ocorrencia;
     }
 
-    public void setLocal_ocorrencia(LocalDateTime local_ocorrencia) {
+    public void setLocal_ocorrencia(String local_ocorrencia) {
         this.local_ocorrencia = local_ocorrencia;
     }
 
