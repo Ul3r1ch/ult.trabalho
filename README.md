@@ -10,3 +10,10 @@ Anna Julia Borges,
 Julia Ulerich,
 Julia Pinheiro e
 Maria Clara de Melo
+## Links:
+### Slide
+https://www.canva.com/design/DAG5-yLYFSI/zxtpwvn95kKmC8EvTbq1PA/edit?utm_content=DAG5-yLYFSI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton&authuser=0&hl=pt
+### Documentação
+https://sfirjan-my.sharepoint.com/:w:/g/personal/pet0156398_aluno_firjansenaisesi_com_br/IQBh9oCAm7_QSruePIPIg8NUAdi0wVvaVxy7bRbLvKjb8l4?e=qbwllM&authuser=0&hl=pt
+### Deploy
+https://ult-trabalho.onrender.com/ulttrabalho/swagger-ui/index.html#/
