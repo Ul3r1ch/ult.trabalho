@@ -12,7 +12,7 @@ public class TurmaService {
 @Autowired 
 public TurmaRepository turmaRepository;
 
-public List<Turma> listartodos(){
+    public List<Turma> listartodos(){
        return turmaRepository.findAll();
         }
 

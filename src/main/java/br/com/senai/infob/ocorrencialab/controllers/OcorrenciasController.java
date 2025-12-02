@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
 import br.com.senai.infob.ocorrencialab.models.Ocorrencias;
 import br.com.senai.infob.ocorrencialab.services.OcorreciasService;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
@@ -37,7 +37,7 @@ public class OcorrenciasController {
         }
         
     @PostMapping("/salvar")
-    public Ocorrencias salvar (@RequestBody Ocorrencias ocorrencias, @RequestParam String senha) {    
+    public Ocorrencias salvar (@RequestBody Ocorrencias ocorrencias) {    
         return ocorrenciasService.salvar(ocorrencias);
     }
 

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.senai.infob.ocorrencialab.models.Turma;
@@ -38,7 +37,7 @@ public class TurmaController {
         }
         
     @PostMapping("/salvar")
-    public Turma salvar (@RequestBody Turma turma, @RequestParam String senha) {    
+    public Turma salvar (@RequestBody Turma turma) {    
         return turmaService.salvar(turma);
     }
 
